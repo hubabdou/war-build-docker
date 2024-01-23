@@ -1,8 +1,8 @@
 node {
-     def registryProjet='registry.gitlab.com/xavki/presentations-jenkins/wartest'
+     def registryProjet='registry.gitlab.com/plaga1/presentations-jenkins'
    def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
     stage('Clone') {
-          git 'https://github.com/priximmo/war-build-docker.git'
+          git 'https://github.com/hubabdou/war-build-docker.git'
     }
     stage('Maven package'){
             sh 'mvn package'
